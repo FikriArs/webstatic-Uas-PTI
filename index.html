@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
-  <link rel="stylesheet" href="stylesindex.css">
-  <title>UAS 3337220118 PTI | Web TMT</title>
-</head>
-<body>
-  <div class="container">
-    <!-- Navigation Bar -->
-    <nav>
-      <ul class="nav__links nav__left">
-        <li><a href="#" class="logo">Hololive</a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="https://shop.hololivepro.com/collections/all?open=talent&q=%22Talent_%E5%B8%B8%E9%97%87%E3%83%88%E3%83%AF%22">Shop</a></li>
-        <li><a href="#">Collection</a></li>
-      </ul>
-      <ul class="nav__links nav__right">
-        <li><a href="https://shop.hololivepro.com/collections/all?open=talent&q=%22Talent_%E5%B8%B8%E9%97%87%E3%83%88%E3%83%AF%22">Cart</a></li>
-        <li><a href="#">Login/Register</a></li>
-        <li><a href="data.html">Profile</a></li>
-      </ul>
-    </nav>
-
-    <img src="assets/back.png" alt="back" />
-    <h4 class="text__left">TO</h4>
-    <h4 class="text__right">WA</h4>
-    <button class="btn explore" id="exploreBtn">EXPLORE</button>
-    <button class="btn print">こんやっぴー</button>
-    <button class="btn catalog">おつやっぴー</button>
-    <h5 class="feature-1">Talents</h5>
-    <h5 class="feature-2">Merch</h5>
-    <h5 class="feature-3">Game</h5>
-    <h5 class="feature-4">Music</h5>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesindex.css" />
+    <title>UAS 3337220118 PTI | Web TMT</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul class="nav__links nav__left">
+          <li><a href="#" class="logo">Hololive</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="https://shop.hololivepro.com/collections/all?open=talent&q=%22Talent_%E5%B8%B8%E9%97%87%E3%83%88%E3%83%AF%22">Shop</a></li>
+          <li><a href="#">Collection</a></li>
+        </ul>
+        <ul class="nav__links nav__right">
+          <li><a href="https://shop.hololivepro.com/collections/all?open=talent&q=%22Talent_%E5%B8%B8%E9%97%87%E3%83%88%E3%83%AF%22">Cart</a></li>
+          <li><a href="#">Login/Register</a></li>
+          <li><a href="data.html">Profile</a></li>
+        </ul>
+      </nav>
+      <img src="assets/back.png" alt="back" />
+      <h4 class="text__left">TO</h4>
+      <h4 class="text__right">WA</h4>
+      <button class="btn explore" id="exploreBtn">EXPLORE</button>
+      <button class="btn print">こんやっぴー</button>
+      <button class="btn catalog">おつやっぴー</button>
+      <h5 class="feature-1">Talents</h5>
+      <h5 class="feature-2">Merch</h5>
+      <h5 class="feature-3">Game</h5>
+      <h5 class="feature-4">Music</h5>
+      
+      <footer class="footer">
+        <p>Tokoyami Towa | Hololive JP</p>
+        <div class="footer__links">
+          <li><a href="https://www.youtube.com/channel/UC1uv2Oq6kNxgATlCiez59hw">Youtube</a></li>
+          <li><a href="https://open.spotify.com/artist/0XZGQi9wNsE1z9L0AWhC82?si=p51Xk174T-a2FdsZt862Dg">Spotify</a></li>
+          <li><a href="https://twitter.com/tokoyamitowa">Twitter</a></li>
+        </div>
+      </footer>
+    </div>
 
     <section class="TMT" id="TMT">
       <div class="section__container TMT__container">
         <div class="TMT__image">
           <span></span>
-          <video id="towaVideo" autoplay loop muted controls>
-            <!-- Initial source -->
-            <source src="assets/videos/segment1.mp4" type="video/mp4">
+          <video autoplay loop muted controls>
+            <source src="J:\tmt wip\assets\Tmt.mp4" type="video/mp4">
           </video>
         </div>
         <div class="TMT__content">
@@ -55,39 +65,13 @@
         </div>
       </div>
     </section>
-
-    <footer class="footer">
-      <p>Tokoyami Towa | Hololive JP</p>
-      <div class="footer__links">
-        <li><a href="https://www.youtube.com/channel/UC1uv2Oq6kNxgATlCiez59hw">Youtube</a></li>
-        <li><a href="https://open.spotify.com/artist/0XZGQi9wNsE1z9L0AWhC82?si=p51Xk174T-a2FdsZt862Dg">Spotify</a></li>
-        <li><a href="https://twitter.com/tokoyamitowa">Twitter</a></li>
-      </div>
-    </footer>
-  </div>
-
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="main.js"></script>
-  <script>
- 
-    const video = document.getElementById('towaVideo');
-    const segments = [
-      'assets/videos/segment1.mp4',
-      'assets/videos/segment2.mp4',
-    ];
-    let currentSegment = 1;
-
-    video.addEventListener('ended', function() {
-      if (currentSegment < segments.length) {
-        video.src = segments[currentSegment];
-        currentSegment++;
-        video.play();
-      }
-    });
-
-    document.getElementById('exploreBtn').addEventListener('click', function() {
-      document.getElementById('TMT').scrollIntoView({ behavior: 'smooth' });
-    });
-  </script>
-</body>
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+    <script>
+      document.getElementById('exploreBtn').addEventListener('click', function() {
+        document.getElementById('TMT').scrollIntoView({ behavior: 'smooth' });
+      });
+    </script>
+  </body>
 </html>
