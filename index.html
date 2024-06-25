@@ -74,16 +74,14 @@
     const segments = [
       'assets/videos/segment1.mp4',
       'assets/videos/segment2.mp4',
-      'assets/videos/segment3.mp4' // Add more segments as needed
     ];
     let currentSegment = 1;
 
     video.addEventListener('ended', function() {
       if (currentSegment < segments.length) {
-        // Load the next segment
         video.src = segments[currentSegment];
         currentSegment++;
-        video.play(); // Auto-play the next segment
+        video.play();
       }
     });
 
