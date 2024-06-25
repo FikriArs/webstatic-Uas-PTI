@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+:root {
+    --primary-color: #8263a3;
+    --text-dark: #232637;
+    --white: #e9e5f0;
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: hsl(290, 63%, 79%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 50px;
+    text-align: center;
+    border: 2px solid #004a6d;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #004a6d;
+}
+
+.history {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.history-item span {
+    display: inline-block;
+}
+
+.date {
+    color: #004a6d;
+}
+
+.description {
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #004a6d;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
